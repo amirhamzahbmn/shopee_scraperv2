@@ -5,7 +5,6 @@ from parsel import Selector
 import time, csv
 import numpy as np
 
-# 1. Create HTTP client with headers that look like a real web browser
 client = Client(
     headers={
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
@@ -53,7 +52,7 @@ for page in [1, 2, 3, 4]:
         print(result)
         csv_list.append(result)
 
-    time.sleep((59-30)*np.random.random()+5) # from 5 to 30 seconds
+    time.sleep((59-30)*np.random.random()+5) # from 5 to 30 seconds.
 
 with open('shopee_shop_list.csv','w', newline='',encoding='utf-8') as f:
 	writer=csv.writer(f)
